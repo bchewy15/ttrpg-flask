@@ -15,3 +15,16 @@
 .ml-auto {
     margin-left: auto;
 }
+
+.main-content {
+    min-height: 100vh;
+}
+
+.img-zone {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.card-subtext {
+    color: rgb(153, 153, 153);
+}
