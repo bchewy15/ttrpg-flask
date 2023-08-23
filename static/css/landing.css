@@ -28,3 +28,15 @@
 .card-subtext {
     color: rgb(153, 153, 153);
 }
+
+.passives {
+    border: 1px solid white;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.titleP {
+    font-weight: bold;
+}

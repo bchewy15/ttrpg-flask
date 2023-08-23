@@ -62,46 +62,89 @@
         </div>
     </nav>
     <div class="container-fluid main-content bg-dark">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 g-4">
             <!-- HIROTH CARD -->
             <div class="col">
                 <div class="card mb-2 bg-dark text-light border-light">
-                    <div class="row g-0">
-                        <div class="col-4 bg-light img-zone">
-                            <img src="{{ url_for('static',filename='img/dragonborn.png') }}" class="img-fluid rounded-start m-2" alt="...">
+                    <div class="row pt-3 px-3">
+                        <div class="col col-auto">
+                            <img src="{{ url_for('static',filename='img/dragonborn.png') }}"
+                                class="img-fluid rounded-start" width="100px">
                         </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h3 class="card-title mb-0">Hiroth</h3>
-                                <h4 class="card-subtext">1st Level Paladin</h4>
-                                <div class="row">
-                                    <!-- AC -->
-                                    <div class="col">
-                                        <p class="mb-0">Armour</p>
-                                        <p><i class="fa-solid fa-shield-halved"></i> 18</p>
-                                    </div>
-                                    <!-- Perception -->
-                                    <div class="col">
-                                        <p class="mb-0">Perception</p>
-                                        <p><i class="fa-solid fa-eye"></i> 9</p>
-                                    </div>
-                                    <!-- Investigation -->
-                                    <div class="col">
-                                        <p class="mb-0">Investigation</p>
-                                        <p><i class="fa-solid fa-compass"></i> 9</p>
-                                    </div>
-                                    <!-- Insight -->
-                                    <div class="col">
-                                        <p class="mb-0">Insight</p>
-                                        <p><i class="fa-solid fa-brain"></i> 11</p>
-                                    </div>
-                                </div>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
+                        <div class="col">
+                            <h3 class="card-title mb-0">Hiroth</h3>
+                            <h4 class="card-subtext">1st Level Paladin</h4>
                         </div>
                     </div>
+
+                    <div class="card-body">
+                        
+                        <div class="row text-center">
+                            <!-- AC -->
+                            <div class="col-3">
+                                <p class="mb-0 acHead titleP">Armour</p>
+                                <p><i class="fa-solid fa-shield-halved fa-sm"></i> 18</p>
+                            </div>
+                            <!-- Perception -->
+                            <div class="col-3 mb-3">
+                                <p class="mb-0 perHead titleP">Perception</p>
+                                <p><i class="fa-solid fa-eye fa-sm"></i> 09</p>
+                            </div>
+                            <!-- Investigation -->
+                            <div class="col-3">
+                                <p class="mb-0 invHead titleP">Investigation</p>
+                                <p><i class="fa-solid fa-compass fa-sm"></i> 09</p>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-3 mb-3">
+                                <p class="mb-0 insHead titleP">Insight</p>
+                                <p><i class="fa-regular fa-lightbulb fa-sm"></i> 11</p>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <!-- AC -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">STR</p>
+                                <p><i class="fa-solid fa-hand-fist fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                            </div>
+                            <!-- Perception -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">DEX</p>
+                                <p><i class="fa-solid fa-person-running fa-xs"></i> 10</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +0</p>
+                            </div>
+                            <!-- Investigation -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CON</p>
+                                <p><i class="fa-solid fa-heart fa-xs"></i> 15</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +2</p>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">INT</p>
+                                <p><i class="fa-solid fa-brain fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">WIS</p>
+                                <p><i class="fa-solid fa-hat-wizard fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CHR</p>
+                                <p><i class="fa-solid fa-comments fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                            </div>
+                        </div>
+                        <p class="card-text">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+
+
                 </div>
             </div>
             <!-- SAMIRA CARD -->
@@ -109,7 +152,8 @@
                 <div class="card mb-2 bg-dark text-light border-light">
                     <div class="row g-0">
                         <div class="col-4 bg-light img-zone">
-                            <img src="{{ url_for('static',filename='img/tiefling.png') }}" class="img-fluid rounded-start m-2" alt="...">
+                            <img src="{{ url_for('static',filename='img/tiefling.png') }}"
+                                class="img-fluid rounded-start m-2" alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-body">
@@ -128,7 +172,8 @@
                 <div class="card mb-2 bg-dark text-light border-light">
                     <div class="row g-0">
                         <div class="col-4 bg-light img-zone">
-                            <img src="{{ url_for('static',filename='img/half-elf.png') }}" class="img-fluid rounded-start m-2" alt="...">
+                            <img src="{{ url_for('static',filename='img/half-elf.png') }}"
+                                class="img-fluid rounded-start m-2" alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-body">
@@ -145,6 +190,8 @@
         </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static',filename='javascript/landing.js') }}"></script>
 </body>
 
 </html>
