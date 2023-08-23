@@ -1,0 +1,17 @@
+.navbar {
+    min-height: 80px;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-right: 5px;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
