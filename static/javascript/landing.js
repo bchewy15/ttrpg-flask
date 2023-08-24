@@ -1,7 +1,7 @@
 function updateHeaderText() {
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    if (screenWidth < 550 || (screenWidth < 1595 && screenWidth > 1200) || (screenWidth < 1060 && screenWidth > 768) ) {
+    if (screenWidth < 1750 ) {
         $(".acHead").text('AC');
         $(".perHead").text('PER');
         $(".invHead").text('INV');

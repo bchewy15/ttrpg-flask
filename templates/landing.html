@@ -38,7 +38,7 @@
                             Hub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-users-rectangle"></i> Sheets</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-id-card"></i> Sheets</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-feather-pointed"></i> Backstories</a>
@@ -61,11 +61,11 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid main-content bg-dark">
+    <div class="container-fluid main-content py-3">
         <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 g-4">
             <!-- HIROTH CARD -->
             <div class="col">
-                <div class="card mb-2 bg-dark text-light border-light">
+                <div class="card mb-2 bg-dark text-light" id="hirothBorder">
                     <div class="row pt-3 px-3">
                         <div class="col col-auto">
                             <img src="{{ url_for('static',filename='img/dragonborn.png') }}"
@@ -73,117 +73,308 @@
                         </div>
                         <div class="col">
                             <h3 class="card-title mb-0">Hiroth</h3>
-                            <h4 class="card-subtext">1st Level Paladin</h4>
+                            <h4 class="card-flavor mb-1" id="hiroth">"The Stormreaver"</h4>
+                            <h5 class="card-subtext mb-0">1st Level Paladin</h5>
+                            <h5 class="card-subtext mb-0">Blue Dragonborn</h5>
+                            <h5 class="card-subtext">Male <i class="fa-solid fa-mars fa-sm male"></i></h5>
                         </div>
                     </div>
-
                     <div class="card-body">
-                        
                         <div class="row text-center">
                             <!-- AC -->
-                            <div class="col-3">
-                                <p class="mb-0 acHead titleP">Armour</p>
-                                <p><i class="fa-solid fa-shield-halved fa-sm"></i> 18</p>
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 acHead titleP">Armour</p>
+                                        <p><i class="fa-solid fa-shield-halved fa-sm"></i> 18</p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Perception -->
-                            <div class="col-3 mb-3">
-                                <p class="mb-0 perHead titleP">Perception</p>
-                                <p><i class="fa-solid fa-eye fa-sm"></i> 09</p>
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 perHead titleP">Perception</p>
+                                        <p><i class="fa-solid fa-eye fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Investigation -->
-                            <div class="col-3">
-                                <p class="mb-0 invHead titleP">Investigation</p>
-                                <p><i class="fa-solid fa-compass fa-sm"></i> 09</p>
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 invHead titleP">Investigation</p>
+                                        <p><i class="fa-solid fa-compass fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Insight -->
-                            <div class="col-3 mb-3">
-                                <p class="mb-0 insHead titleP">Insight</p>
-                                <p><i class="fa-regular fa-lightbulb fa-sm"></i> 11</p>
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 insHead titleP">Insight</p>
+                                        <p><i class="fa-regular fa-lightbulb fa-sm"></i> 11</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row text-center">
-                            <!-- AC -->
+                            <!-- STRENGTH -->
                             <div class="col-4 mb-3">
                                 <p class="mb-0 titleP">STR</p>
                                 <p><i class="fa-solid fa-hand-fist fa-xs"></i> 16</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +3</p>
                             </div>
-                            <!-- Perception -->
+                            <!-- DEXTERITY -->
                             <div class="col-4">
                                 <p class="mb-0 titleP">DEX</p>
                                 <p><i class="fa-solid fa-person-running fa-xs"></i> 10</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +0</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +0</p>
                             </div>
-                            <!-- Investigation -->
+                            <!-- CONSTITUTION -->
                             <div class="col-4">
                                 <p class="mb-0 titleP">CON</p>
                                 <p><i class="fa-solid fa-heart fa-xs"></i> 15</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +2</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +2</p>
                             </div>
-                            <!-- Insight -->
+                            <!-- INTELLIGENCE -->
                             <div class="col-4 mb-3">
                                 <p class="mb-0 titleP">INT</p>
                                 <p><i class="fa-solid fa-brain fa-xs"></i> 08</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> -1</p>
                             </div>
-                            <!-- Insight -->
+                            <!-- WISDOM -->
                             <div class="col-4">
                                 <p class="mb-0 titleP">WIS</p>
                                 <p><i class="fa-solid fa-hat-wizard fa-xs"></i> 08</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +1</p>
                             </div>
-                            <!-- Insight -->
+                            <!-- CHARISMA -->
                             <div class="col-4">
                                 <p class="mb-0 titleP">CHR</p>
                                 <p><i class="fa-solid fa-comments fa-xs"></i> 16</p>
                                 <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +5</p>
                             </div>
                         </div>
                         <p class="card-text">This is a wider card with supporting text below as a natural
                             lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
-
-
                 </div>
             </div>
             <!-- SAMIRA CARD -->
             <div class="col">
-                <div class="card mb-2 bg-dark text-light border-light">
-                    <div class="row g-0">
-                        <div class="col-4 bg-light img-zone">
+                <div class="card mb-2 bg-dark text-light" id="samiraBorder">
+                    <div class="row pt-3 px-3">
+                        <div class="col col-auto">
                             <img src="{{ url_for('static',filename='img/tiefling.png') }}"
-                                class="img-fluid rounded-start m-2" alt="...">
+                                class="img-fluid rounded-start" width="100px">
                         </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h3 class="card-title mb-0">Samira</h3>
-                                <h4 class="card-subtext">1st Level Druid</h4>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="col">
+                            <h3 class="card-title mb-0">Samira</h3>
+                            <h4 class="card-flavor mb-1" id="samira">"Guardian Of The Forest"</h4>
+                            <h5 class="card-subtext mb-0">1st Level Druid</h5>
+                            <h5 class="card-subtext mb-0">Tiefling</h5>
+                            <h5 class="card-subtext">Female <i class="fa-solid fa-venus fa-sm female"></i></h5>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <!-- AC -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 acHead titleP">Armour</p>
+                                        <p><i class="fa-solid fa-shield-halved fa-sm"></i> 18</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Perception -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 perHead titleP">Perception</p>
+                                        <p><i class="fa-solid fa-eye fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Investigation -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 invHead titleP">Investigation</p>
+                                        <p><i class="fa-solid fa-compass fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 insHead titleP">Insight</p>
+                                        <p><i class="fa-regular fa-lightbulb fa-sm"></i> 11</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row text-center">
+                            <!-- STRENGTH -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">STR</p>
+                                <p><i class="fa-solid fa-hand-fist fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +3</p>
+                            </div>
+                            <!-- DEXTERITY -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">DEX</p>
+                                <p><i class="fa-solid fa-person-running fa-xs"></i> 10</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +0</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +0</p>
+                            </div>
+                            <!-- CONSTITUTION -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CON</p>
+                                <p><i class="fa-solid fa-heart fa-xs"></i> 15</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +2</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +2</p>
+                            </div>
+                            <!-- INTELLIGENCE -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">INT</p>
+                                <p><i class="fa-solid fa-brain fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> -1</p>
+                            </div>
+                            <!-- WISDOM -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">WIS</p>
+                                <p><i class="fa-solid fa-hat-wizard fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +1</p>
+                            </div>
+                            <!-- CHARISMA -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CHR</p>
+                                <p><i class="fa-solid fa-comments fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +5</p>
+                            </div>
+                        </div>
+                        <p class="card-text">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
             <!-- MABEL CARD -->
             <div class="col">
-                <div class="card mb-2 bg-dark text-light border-light">
-                    <div class="row g-0">
-                        <div class="col-4 bg-light img-zone">
+                <div class="card mb-2 bg-dark text-light" id="mabelBorder">
+                    <div class="row pt-3 px-3">
+                        <div class="col col-auto">
                             <img src="{{ url_for('static',filename='img/half-elf.png') }}"
-                                class="img-fluid rounded-start m-2" alt="...">
+                                class="img-fluid rounded-start" width="100px">
                         </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h3 class="card-title mb-0">Mabel</h3>
-                                <h4 class="card-subtext">1st Level Ranger</h4>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="col">
+                            <h3 class="card-title mb-0">Mabel</h3>
+                            <h4 class="card-flavor mb-1" id="mabel">"Arrow Of The Righteous"</h4>
+                            <h5 class="card-subtext mb-0">1st Level Ranger</h5>
+                            <h5 class="card-subtext mb-0">Half-Elf</h5>
+                            <h5 class="card-subtext">Female <i class="fa-solid fa-venus fa-sm female"></i></h5>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <!-- AC -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 acHead titleP">Armour</p>
+                                        <p><i class="fa-solid fa-shield-halved fa-sm"></i> 18</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Perception -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 perHead titleP">Perception</p>
+                                        <p><i class="fa-solid fa-eye fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Investigation -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 invHead titleP">Investigation</p>
+                                        <p><i class="fa-solid fa-compass fa-sm"></i> 09</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Insight -->
+                            <div class="col-3 pasBlock">
+                                <div class="row px-2">
+                                    <div class="col pasInner">
+                                        <p class="mb-0 insHead titleP">Insight</p>
+                                        <p><i class="fa-regular fa-lightbulb fa-sm"></i> 11</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row text-center">
+                            <!-- STRENGTH -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">STR</p>
+                                <p><i class="fa-solid fa-hand-fist fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +3</p>
+                            </div>
+                            <!-- DEXTERITY -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">DEX</p>
+                                <p><i class="fa-solid fa-person-running fa-xs"></i> 10</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +0</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +0</p>
+                            </div>
+                            <!-- CONSTITUTION -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CON</p>
+                                <p><i class="fa-solid fa-heart fa-xs"></i> 15</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +2</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +2</p>
+                            </div>
+                            <!-- INTELLIGENCE -->
+                            <div class="col-4 mb-3">
+                                <p class="mb-0 titleP">INT</p>
+                                <p><i class="fa-solid fa-brain fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> -1</p>
+                            </div>
+                            <!-- WISDOM -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">WIS</p>
+                                <p><i class="fa-solid fa-hat-wizard fa-xs"></i> 08</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> -1</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +1</p>
+                            </div>
+                            <!-- CHARISMA -->
+                            <div class="col-4">
+                                <p class="mb-0 titleP">CHR</p>
+                                <p><i class="fa-solid fa-comments fa-xs"></i> 16</p>
+                                <p class="card-subtext"><i class="fa-solid fa-dice-d20 fa-sm"></i> +3</p>
+                                <p class="card-subtext"><i class="fa-solid fa-person-falling-burst fa-sm"></i> +5</p>
+                            </div>
+                        </div>
+                        <p class="card-text">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
