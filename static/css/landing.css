@@ -83,3 +83,15 @@ p {
 .female {
     color: rgb(145, 89, 120);
 }
+
+.lawG {
+    color: rgba(36, 110, 36, 0.7);
+}
+
+.neuG {
+    color: rgb(73, 148, 73, 0.7);
+}
+
+.lawE {
+    color: rgb(149, 25, 25, 0.7);
+}
